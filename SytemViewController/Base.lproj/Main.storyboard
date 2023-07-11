@@ -1,24 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pyi-7x-DH7">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SytemViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroImage" translatesAutoresizingMaskIntoConstraints="NO" id="tvx-qQ-ar1">
+                                <rect key="frame" x="16" y="60" width="343" height="243.5"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="aE5-Z5-B9a">
+                                <rect key="frame" x="-6.5" y="311.5" width="388" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tw8-Ra-LoM">
+                                        <rect key="frame" x="0.0" y="0.0" width="83.5" height="44"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="Ecx-D1-IuL"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Share"/>
+                                        <connections>
+                                            <action selector="shareButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="281-fN-4Lc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1h-RJ-y3r">
+                                        <rect key="frame" x="101.5" y="0.0" width="83.5" height="44"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Safari"/>
+                                        <connections>
+                                            <action selector="safariButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OA0-Sq-P7w"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Aa-yV-h8T">
+                                        <rect key="frame" x="203" y="0.0" width="83.5" height="44"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Camera"/>
+                                        <connections>
+                                            <action selector="cameraButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VVC-qx-LDF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pea-uq-SVq">
+                                        <rect key="frame" x="304.5" y="0.0" width="83.5" height="44"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Email"/>
+                                        <connections>
+                                            <action selector="emailButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EWX-ml-EUX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tvx-qQ-ar1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="E1v-BW-hjp"/>
+                            <constraint firstItem="tvx-qQ-ar1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="EP0-cf-7gb"/>
+                            <constraint firstItem="aE5-Z5-B9a" firstAttribute="top" secondItem="tvx-qQ-ar1" secondAttribute="bottom" constant="8" symbolic="YES" id="YnG-v7-Fcf"/>
+                            <constraint firstItem="aE5-Z5-B9a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z2g-ZW-CiZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tvx-qQ-ar1" secondAttribute="trailing" constant="16" id="bBM-s1-Udp"/>
+                            <constraint firstItem="aE5-Z5-B9a" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zY9-cr-rrL"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="f3r-Le-a7b"/>
+                    <connections>
+                        <outlet property="showImageView" destination="tvx-qQ-ar1" id="9So-iE-x88"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="959.20000000000005" y="70.614692653673174"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tx9-CY-hb9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pyi-7x-DH7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pqk-gp-7ak">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4eW-Za-IZN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nKd-i1-bqb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="70.614692653673174"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heroImage" width="220" height="326"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
